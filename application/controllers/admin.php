@@ -22,4 +22,8 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('backend/index');
 	}
+	public function dashboard()
+	{		
+	$this->load->view('backend/dashboard');
+	}
 }
