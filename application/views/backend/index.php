@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 <html lang="en">
 
 <head>
@@ -107,12 +106,3 @@
 </body>
 
 </html>
-=======
-<?php include(APPPATH.'views\backend\include\header.php') ;echo base_url();?>
-</body></html>
->>>>>>> origin/master
-=======
-<?php include(APPPATH.'views\backend\include\header.php') ;echo base_url();?>
- </body>
- </html>
->>>>>>> parent of 07b2182... design of homepage
