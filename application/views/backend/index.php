@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html lang="en">
 
 <head>
@@ -104,5 +103,4 @@
   <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script src="<?php echo base_url();?>assets/backend/js/login.js"></script>
 </body>
-
 </html>
