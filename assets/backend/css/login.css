@@ -12,14 +12,17 @@ p{
 input:focus{
   background-color:yellow;
 }
+
 .flat-form {
-  background: #34495e;  /*tablebg e74c3c #34495e  #88565b ed7271*/
+  background: #34495e none repeat scroll 0 0;  /*tablebg e74c3c #34495e  #88565b ed7271*/
+  font-family: "Roboto";
+  height: auto;
   margin: 25px auto;
-  width: 390px;
-  height: 365px;
+  padding: 0 0 20px;
   position: relative;
-  font-family: 'Roboto';
+  width: 390px;
 }
+
 .tabs {
   background: #ed7271;  /*topbar #c0392b #88565b*/
   height: 40px;
@@ -86,7 +89,7 @@ form input[type=submit] {
 }
 
 form input[type=text],
-form input[type=password] {
+form input[type=password], form input[type=email], form select{
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
@@ -147,15 +150,32 @@ form input[type=password] {
 
 ::-webkit-input-placeholder {
   color:dark ;    /*  #e74c3c */
+  opacity:1;
 }
 :-moz-placeholder {
   /* Firefox 18- */
   color: #e74c3c;
+  opacity:1;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #e74c3c;
+  opacity:1;
 }
 :-ms-input-placeholder {
   color: #e74c3c;
+  opacity:1;
+}
+
+label{float:left;}
+form input[type=file]{height:40px; margin-bottom:10px;}
+.captcha{ border: 1px solid;  float: left; height: 38px; width: 20%; margin-right:2px;}
+.captcha_bx input[type=text]{width:78%;}
+
+/* responsive */
+
+@media(max-width:400px){
+.flat-form{width:93%; margin:0 auto;}
+.tabs li:last-child a {width: 150px;}
+.tabs a {padding: 12px 13px;}
 }

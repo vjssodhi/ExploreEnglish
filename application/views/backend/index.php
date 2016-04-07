@@ -71,6 +71,24 @@
             <li>
               <input type="password" placeholder="Password" />
             </li>
+             <li>
+              <input type="email" placeholder="Email" />
+            </li>
+             <li>
+              <select>
+              <option>User Type</option>
+              <option>Teacher</option>
+              <option>Agent</option>
+              <option>Marketing Specialist</option>
+              </select>
+            </li>
+             <li>
+            <input type="file" placeholder="Browse"/>
+            </li>
+            <li class="captcha_bx">
+            <div class="captcha"></div>
+            <input type="text" placeholder="Type Here"/>
+            </li>
             <li>
               <input type="submit" value="Sign Up" class="button" />
             </li>
