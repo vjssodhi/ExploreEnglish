@@ -197,17 +197,17 @@
           </div>
           <!-- info row -->
           <div class="row invoice-info">
-            <div class="col-sm-4 invoice-col">
+            <div class="col-sm-5 invoice-col">
                <address>
-                <strong>Institute </strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
-                Phone: (804) 123-5432<br>
-                Email: info@almasaeedstudio.com
+               
+                <i class="fa fa-bank"></i> &nbsp; Institute name<br>
+                <i class="fa fa-envelope-o"></i> &nbsp; info@gmail.com<br>
+                <i class="fa fa-phone"></i> &nbsp;(804) 123-5432<br>
+                <i class="fa fa-location-arrow"></i> &nbsp; El snort testosterone trophy driving gloves handsom
               </address>
             </div><!-- /.col -->
-            <div class="col-sm-4 invoice-col">
-              <div class="form-group">
+            <div class="col-md-4 col-sm-6 col-xs-12 invoice-col">
+              <div class="form-group col-sm-9">
                       <label>Enroll Agent</label>
                       <select class="form-control">
                       <option>select</option>
@@ -215,7 +215,7 @@
                       <option>ipsum</option>
                       </select>                      
                     </div>
-                    <button class="btn btn-primary" type="submit">Enroll</button>
+                    <button class="btn btn-primary enroll_btn" type="submit">Enroll</button>
             </div><!-- /.col -->
           </div><!-- /.row -->
 
