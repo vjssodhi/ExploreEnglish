@@ -26,4 +26,9 @@ class Admin extends CI_Controller {
 	{		
 	$this->load->view('backend/dashboard');
 	}
+	public function enrollstudent()
+	{
+	$this->load->view('backend/enrollstudent');	
+		
+	}
 }
