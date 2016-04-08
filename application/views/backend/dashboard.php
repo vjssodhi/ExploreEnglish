@@ -1,4 +1,7 @@
-<?php include(APPPATH.'views\backend\include\header.php') ;?>
+<?php include(APPPATH.'views\backend\include\header.php') ;
+
+?>
+
 
  <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">

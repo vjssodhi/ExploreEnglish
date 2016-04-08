@@ -96,8 +96,9 @@ form input[type=password], form input[type=email], form select{
   padding-left: 15px;
   background: #fff; /* #44454a  */
   border: none;
-  color: #e74c3c;   /* e74c3c e9e9e9  */
+  color: #333333;   /* e74c3c e9e9e9  */
   outline: none;
+  font-weight:600;
 }
 
 .dark-box {
@@ -149,21 +150,21 @@ form input[type=password], form input[type=email], form select{
 }
 
 ::-webkit-input-placeholder {
-  color:dark ;    /*  #e74c3c */
+  color:#333333 ;    /*  #e74c3c */
   opacity:1;
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #e74c3c;
+  color: #333333;
   opacity:1;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #e74c3c;
+  color: #333333;
   opacity:1;
 }
 :-ms-input-placeholder {
-  color: #e74c3c;
+  color: #333333;
   opacity:1;
 }
 
@@ -171,6 +172,7 @@ label{float:left;}
 form input[type=file]{height:40px; margin-bottom:10px;}
 .captcha{ border: 1px solid;  float: left; height: 38px; width: 20%; margin-right:2px;}
 .captcha_bx input[type=text]{width:78%;}
+form select, form input[type=email]{font-weight:400;}
 
 /* responsive */
 

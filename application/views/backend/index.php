@@ -41,15 +41,16 @@
       <div id="login" class="form-action show">
         <h1>Login on ExploreEnglish</h1>
         <p>
-          Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius bladit sit amet non
+          
         </p>
-        <form>
+		<?php echo form_open('admin/login');?>
+        <!--<form>-->
           <ul>
             <li>
-              <input type="text" placeholder="Username" />
+              <input type="email" placeholder="Email" name="loginemail"/>
             </li>
             <li>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" name="loginpassword" />
             </li>
             <li>
               <input type="submit" value="Login" class="button" />
@@ -63,31 +64,32 @@
         <p>
           You should totally sign up for our super awesome service. It's what all the cool kids are doing nowadays.
         </p>
-        <form>
+		<?php echo form_open('admin/register');?>
+        <!--<form  method="post" action="admin/register" >-->
           <ul>
             <li>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" name="reg_username" />
             </li>
             <li>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" name="reg_password"/>
             </li>
              <li>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" name="reg_email" />
             </li>
              <li>
-              <select>
-              <option>User Type</option>
-              <option>Teacher</option>
-              <option>Agent</option>
-              <option>Marketing Specialist</option>
+              <select name="reg_agent">
+              <option value="">User Type</option>
+              <option value="teacher">Teacher</option>
+              <option value="agent">Agent</option>
+              <option value="marketing_spl">Marketing Specialist</option>
               </select>
             </li>
              <li>
-            <input type="file" placeholder="Browse"/>
+            <input type="file" placeholder="Browse" name="reg_pic"/>
             </li>
             <li class="captcha_bx">
             <div class="captcha"></div>
-            <input type="text" placeholder="Type Here"/>
+            <input type="text" placeholder="Type Here" name="reg_captcha"/>
             </li>
             <li>
               <input type="submit" value="Sign Up" class="button" />
@@ -99,16 +101,17 @@
       <div id="reset" class="form-action hide">
         <h1>Reset Password</h1>
         <p>
-          To reset your password enter your email and your birthday and we'll send you a link to reset your password.
+          To reset your password enter your email and we'll send you a link to reset your password.
         </p>
-        <form>
+		<?php echo form_open('admin/resetpassword');?>
+        <!--<form>-->
           <ul>
             <li>
-              <input type="text" placeholder="Email" />
+              <input type="email" placeholder="Email" name="reset_email" />
             </li>
-            <li>
+            <!--<li>
               <input type="text" placeholder="Birthday" />
-            </li>
+            </li>-->
             <li>
               <input type="submit" value="Send" class="button" />
             </li>
