@@ -14,8 +14,13 @@ class Agent extends CI_Controller {
 	{
 		$this->load->view('backend/viewagent');
 	}
-	public function viewagent()
+	public function addagent()
 	{
 	   $this->load->view('backend/addagent');	
+	}
+	
+	public function agentprofile()
+	{
+		$this->load->view('backend/agentprofile');		
 	}
 } ?>

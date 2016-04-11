@@ -50,7 +50,7 @@
                       </select>                      
                     </div>
 
-                    <a href="<?php echo site_url('admin/enrollstudent');?>" class="btn btn-primary" type="submit">Enroll</a>
+                    <a href="<?php echo site_url('admin/enrollstudent');?>" class="btn btn-primary enroll_btn" type="submit">Enroll</a>
 
                     <!--<button class="btn btn-primary enroll_btn" type="submit">Enroll</button>-->
 

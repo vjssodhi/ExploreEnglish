@@ -79,9 +79,9 @@ input:focus{
   padding-bottom: 10px;
   line-height: 25px;
 }
-form {
+/*form {
   padding-right: 20px !important;
-}
+} */
 form input[type=text],
 form input[type=password],
 form input[type=submit] {

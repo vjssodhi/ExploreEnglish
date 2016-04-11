@@ -28,27 +28,28 @@
             <li class="header">MAIN NAVIGATION</li>
            <li class="active treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Institutes</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-bank"></i> <span>Institutes</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
                 <!--<li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>-->
-                <li><a href="<?php echo site_url('admin/dashboard');?>"><i class="fa fa-circle-o text-red"></i> <span>view institutes</span></a></li>
-                 <li><a href="<?php echo site_url('institute/index');?>"><i class="fa fa-circle-o text-red"></i> <span>Add institutes</span></a></li>
+                <li><a href="<?php echo site_url('admin/dashboard');?>"><i class="fa fa-list-alt"></i> <span>view institutes</span></a></li>
+                 <li><a href="<?php echo site_url('institute/index');?>"><i class="fa fa-plus-square"></i> <span>Add institutes</span></a></li>
                
               </ul>
             </li>
             
         <li class="treeview">
               <a href="#">
-                <i class="fa fa-files-o"></i>
-                <span>Layout Options</span>
-                <span class="label label-primary pull-right">4</span>
+                <i class="fa fa-graduation-cap"></i>
+                <span>Student</span>
+    			 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="<?php echo site_url('student/viewstudent');?>"><i class="fa fa-circle-o text-red"></i> <span>view student</span></a></li>
-                 <li><a href="<?php echo site_url('student/index');?>"><i class="fa fa-circle-o text-red"></i> <span>Add student</span></a></li>
+                <li><a href="<?php echo site_url('student/viewstudent');?>"><i class="fa fa-list-alt"></i> <span>view student</span></a></li>
+                 <li><a href="<?php echo site_url('student/index');?>"><i class="fa fa-plus-square"></i> <span>Add student</span></a></li>
               </ul>
             </li>
+            
             <!--<li>
               <a href="pages/widgets.html">
                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">new</small>
@@ -56,13 +57,13 @@
             </li>-->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-pie-chart"></i>
-                <span>Charts</span>
+                <i class="fa fa-user"></i>
+                <span>Agent</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                 <li><a href="<?php echo site_url('agent/viewagent');?>"><i class="fa fa-circle-o text-red"></i> <span>view student</span></a></li>
-                 <li><a href="<?php echo site_url('agent/addagent');?>"><i class="fa fa-circle-o text-red"></i> <span>Add student</span></a></li>
+                 <li><a href="<?php echo site_url('agent/index');?>"><i class="fa fa-list-alt"></i> <span>view agent</span></a></li>
+                 <li><a href="<?php echo site_url('agent/addagent');?>"><i class="fa fa-plus-square"></i> <span>Add agent</span></a></li>
               </ul>
             </li>
            <!-- <li class="treeview">
@@ -155,8 +156,8 @@
             <!--<li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>-->
             <!--<li class="header">LABELS</li>-->
             
-            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+           <!-- <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>-->
           </ul>
         </section>
         <!-- /.sidebar -->

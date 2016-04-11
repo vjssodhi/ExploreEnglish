@@ -6,7 +6,7 @@
         <div class="content-wrapper" style="min-height: 946px;">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <h1>
+          <h1 class="text-center">
             Enroll Student
            
           </h1>
@@ -43,7 +43,7 @@
                       <label for="exampleInputnickname">Nick name</label>
                       <input type="text" placeholder="Nick Name" id="exampleInputnickname" class="form-control">
                     </div>
-                    <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half space">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half">
                       <label for="exampleInputdob">D.O.B</label>
                       <input type="text" placeholder="D.O.B" id="exampleInputdob" class="form-control">
                     </div>
@@ -128,8 +128,8 @@
                     
                   </div><!-- /.box-body -->
 
-                  <div class="box-footer">
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                  <div class="box-footer text-center">
+                    <button class="btn btn-primary" type="submit">Add</button>
                   </div>
                 </form>
               </div><!-- /.box -->

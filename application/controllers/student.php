@@ -18,4 +18,9 @@ class Student extends CI_Controller {
 	{
 	   $this->load->view('backend/viewstudent');	
 	}
+	public function studentprofile()
+	{
+		$this->load->view('backend/studentprofile');
+	  	
+	}
 } ?>

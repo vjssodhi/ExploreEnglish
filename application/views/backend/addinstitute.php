@@ -6,8 +6,8 @@
         <div class="content-wrapper" style="min-height: 946px;">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <h1>
-            Enroll Student
+          <h1 class="text-center">
+            Institute Management
            
           </h1>
           <ol class="breadcrumb">
@@ -31,105 +31,70 @@
                 
 				<?php echo form_open_multipart('admin/addstudent');?>
                   <div class="box-body">
-                  <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half space">
-                      <label for="exampleInputfirstname">First name</label>
-                      <input type="text" placeholder="First Name" id="exampleInputfirstname" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half">
-                      <label for="exampleInputlastname">Last name</label>
-                      <input type="text" placeholder="Last Name" id="exampleInputlastname" class="form-control">
-                    </div>
-                     <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half space">
-                      <label for="exampleInputnickname">Nick name</label>
-                      <input type="text" placeholder="Nick Name" id="exampleInputnickname" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half space">
-                      <label for="exampleInputdob">D.O.B</label>
-                      <input type="text" placeholder="D.O.B" id="exampleInputdob" class="form-control">
+                  <div class="form-group">
+                      <label for="exampleInputfirstname">Name of institute</label>
+                      <input type="text" placeholder="Name of institute" id="exampleInputfirstname" class="form-control">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Visa category</label>
+                      <label for="exampleInputlastname">Id of institute</label>
+                      <input type="text" placeholder="Id of institute" id="exampleInputlastname" class="form-control">
+                    </div>
+                     
+                    
+                    <div class="form-group">
+                      <label>Status</label>
                       <select class="form-control">
-                      <option>select</option>
-                      <option>lorem</option>
-                      <option>ipsum</option>
+                      <option>Enable/Disable</option>
+                      <option>Enable</option>
+                      <option>Disable</option>
                       </select>                      
                     </div>
                     
                     <div class="form-group">
-                    <label>Number of weeks:</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input type="text" id="reservation" class="form-control pull-right">
+                      <label for="exampleInputmarket">Institute's email-id</label>
+                      <input type="email" placeholder="Institute's email-id" id="exampleInputmarket" class="form-control">
                     </div>
-                  </div>
-                    <div class="form-group">
-                      <label>Courses : &nbsp;</label>
-                      <input type="checkbox"> Ilets &nbsp; &nbsp;
-                      <input type="checkbox"> Lorem &nbsp; &nbsp;
-                      <input type="checkbox"> Ipsum &nbsp; &nbsp;
-                      <input type="checkbox"> Dollor &nbsp; &nbsp;
-                      <input type="checkbox"> Ut sed &nbsp; &nbsp;
-                      <input type="checkbox"> Expecto
-       				</div>
                     
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Study plans</label>
+                      <label for="exampleInputmarket">Institute's alternate email-id</label>
+                      <input type="email" placeholder="Institute's alternate email-id" id="exampleInputmarket" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="exampleInputmarket">Phone number</label>
+                      <input type="tel" placeholder="9 to 11 digits contact number" id="exampleInputmarket" class="form-control">                    
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputmarket">Alternate Phone number 1</label>
+                      <input type="tel" placeholder="Additional contact number(Optioal)" id="exampleInputmarket" class="form-control">                    
+                    </div>
+                     <div class="form-group">
+                      <label for="exampleInputmarket">Alternate Phone number 2</label>
+                      <input type="tel" placeholder="Additional contact number(Optioal)" id="exampleInputmarket" class="form-control">                    
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="exampleInputmarket">Zipcode</label>
+                      <input type="text" placeholder="Pincode/Zipcode" id="exampleInputmarket" class="form-control">                    
+                    </div>
+                    
+                    
+                     <div class="form-group">
+                      <label>Country</label>
                       <select class="form-control">
-                      <option>select</option>
-                      <option>lorem</option>
-                      <option>ipsum</option>
+                      <option>Select country</option>
+                      <option>Lorem</option>
+                      <option>Ipsum</option>
                       </select>                      
                     </div>
                     
-                      <div class="form-group">
-                      <label>Placement test : &nbsp;</label>
-                      <input type="radio" name="test" value="yes">Yes
-                      <input type="radio" name="test" value="no">No                            
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputtest">proficiency test</label>
-                      <input type="text" placeholder="proficiency test" id="exampleInputtest" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputprice">Price</label>
-                      <input type="text" placeholder="Price" id="exampleInputprice" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputmarket">Marketing specialist</label>
-                      <input type="text" placeholder="Marketing specialist" id="exampleInputmarket" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputcode">Unique code</label>
-                      <input type="text" placeholder="Unique code" id="exampleInputcode" class="form-control">
-                    </div>
                     
-                                
-                    
-                    <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half space">
-                      <label>Payment Staus</label>
-                      <select class="form-control">
-                      <option>select</option>
-                      <option>lorem</option>
-                      <option>ipsum</option>
-                      </select>                      
-                    </div>
-                    <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half">
-                      <label>Payment plan</label>
-                      <select class="form-control">
-                      <option>select</option>
-                      <option>lorem</option>
-                      <option>ipsum</option>
-                      </select>                      
-                    </div>
-                    
+                  
                     
                   </div><!-- /.box-body -->
 
-                  <div class="box-footer">
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                  <div class="box-footer text-center">
+                    <button class="btn btn-primary" type="submit">Save</button>
                   </div>
                 </form>
               </div><!-- /.box -->
