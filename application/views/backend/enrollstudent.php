@@ -106,12 +106,7 @@
                       <input type="text" placeholder="Unique code" id="exampleInputcode" class="form-control">
                     </div>
                     
-                     <div class="form-group">
-                      <label> Student's attendance : &nbsp;</label>
-                      <input type="radio" name="test" value="yes">Present
-                      <input type="radio" name="test" value="no">Absent                            
-                    </div>
-                    
+                                
                     
                     <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half space">
                       <label>Payment Staus</label>

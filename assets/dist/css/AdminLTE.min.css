@@ -12,6 +12,7 @@
 input[type="checkbox"], input[type="radio"] {margin: 4px 2px 0; vertical-align: top;}
 .table_bg{background:#fff;}
 .table_bg a img{width:50px; height:50px;}
+.enroll_btn{margin-top: 24px;}
 
 @media(max-width:768px){
 .half{width:100%;}
