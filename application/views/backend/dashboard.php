@@ -235,6 +235,7 @@
                     <th>Phone No.</th>
                     <th>Student Detail</th>
                     <th>Address</th>
+                    <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -244,6 +245,11 @@
                     <td>455-981-221</td>
                     <td>El snort testosterone trophy driving gloves handsome</td>
                     <td>El snort testosterone trophy driving gloves handsome</td>
+                    <td><select class="form-control">
+                      <option>Select</option>
+                      <option>Present</option>
+                      <option>Absent</option>
+                      </select>       </td>
                     </tr>
                   <tr>
                      <td><a href="#"><img src="<?php echo base_url();?>assets/dist/img/avatar5.png" alt="student-img" /></a></td>
@@ -251,6 +257,11 @@
                     <td>247-925-726</td>
                     <td>Wes Anderson umami biodiesel</td>
                     <td>Wes Anderson umami biodiesel</td>
+                     <td><select class="form-control">
+                      <option>Select</option>
+                      <option>Present</option>
+                      <option>Absent</option>
+                      </select>       </td>
                     </tr>
                   <tr>
                     <td><a href="#"><img src="<?php echo base_url();?>assets/dist/img/avatar5.png" alt="student-img" /></a></td>
@@ -258,6 +269,11 @@
                     <td>735-845-642</td>
                     <td>Terry Richardson helvetica tousled street art master</td>
                     <td>Wes Anderson umami biodiesel</td>
+                     <td><select class="form-control">
+                      <option>Select</option>
+                      <option>Present</option>
+                      <option>Absent</option>
+                      </select>       </td>
                   </tr>
                   <tr>
                     <td><a href="#"><img src="<?php echo base_url();?>assets/dist/img/avatar5.png" alt="student-img" /></a></td>
@@ -265,6 +281,11 @@
                     <td>422-568-642</td>
                     <td>Tousled lomo letterpress</td>
                     <td>Terry Richardson helvetica tousled street art master</td>
+                     <td><select class="form-control">
+                      <option>Select</option>
+                      <option>Present</option>
+                      <option>Absent</option>
+                      </select>       </td>
                   </tr>
                 </tbody>
               </table>
