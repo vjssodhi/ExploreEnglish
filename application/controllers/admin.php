@@ -56,7 +56,7 @@ class Admin extends CI_Controller {
 	{			 
 	if(!empty($_POST))
 	{
-	 
+	 print_r($_POST); die;
 	$filename =  $_FILES['userfile']['name'];
     $fileexplode = explode('.',$filename);
 

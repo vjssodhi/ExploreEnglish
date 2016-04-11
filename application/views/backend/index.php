@@ -76,7 +76,7 @@
       <div id="register" class="form-action hide">
         <h1>Register</h1>
          <li>
-  <div class="error" id="error">
+  <div class="error" id="error" style="display:none;">
    
   </div>
               
@@ -103,11 +103,11 @@
               </select>
             </li>
              <li>
-            <input type="file" placeholder="Browse" name="userfile"/>
+            <input type="file" placeholder="Browse" name="userfile" id="userfile" required/>
             </li>
             <li class="captcha_bx">
             <div class="captcha"></div>
-            <input type="text" placeholder="Type Here" name="reg_captcha"/>
+            <input type="text" placeholder="Type Here" name="reg_captcha" id="reg_captcha"/>
             </li>
             <li>
               <input type="submit" value="Sign Up" class="button" />
@@ -142,34 +142,60 @@
   <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script src="<?php echo base_url();?>assets/backend/js/login.js"></script>
   <script>
-  $("#registerform").submit(function(e) {
+  
+  $("#registerform").submit(function(e) { 
 	var username =  $('#reg_username').val();
 	var password =  $('#reg_password').val();
 	var email =  $('#reg_email').val();
 	var reg_agent =  $('#reg_agent').val();
+	var reg_captcha = $('#reg_captcha').val();
+	
 	if(username == '')
-	{
-	$('<p>Please enter a Username.</p>').appendTo('#error');
+	{   $('#error').show();
+		$('#error').text('please enter a Username');
+	//$('<p>Please enter a Username.</p>').appendTo('#error');
+	 $('#error').delay(1000).fadeOut();
 		return false;
 		
 	}else if(password == ''){
-		
-	$('<p>Please enter a Password.</p>').appendTo('#error');
+		$('#error').show();
+		$('#error').text('Please enter a Password.');
+        $('#error').delay(1000).fadeOut();
+	
 		return false;			
 	}else if(email =='')
 	{
-	$('<p>Please enter an Email.</p>').appendTo('#error');
+	$('#error').show();
+		$('#error').text('Please enter an Email.');
+        $('#error').delay(1000).fadeOut();
 		return false;				
 	}else if(reg_agent == '')
 	{
-	$('<p>Please select a Usertype.</p>').appendTo('#error');	
+		$('#error').show();
+		$('#error').text('Please select a Usertype.');
+        $('#error').delay(1000).fadeOut();	
 		return false;
+	}	
+	else if(reg_captcha == '')
+	{
+		$('#error').show();
+		$('#error').text('Please enter the captcha code.');
+        $('#error').delay(1000).fadeOut();	
+		return false;
+		
 	}else{
 		
+    var data;
+
+    formdata = new FormData();
+    data.append( 'file', $( '#userfile' )[0].files[0] );
 		$.ajax({
            type: "POST",
-           url: url,
-           data: $("#registerform").serialize(), // serializes the form's elements.
+           url: "<?php echo base_url(); ?>" + "admin/do_upload",
+           //data: $("#registerform").serialize(), // serializes the form's elements.
+		   data:{formdata:formdata,username:username},
+		   processData: false,
+           contentType: false,
            success: function(data)
            {
                alert(data); // show response from the php script.
