@@ -233,8 +233,9 @@ class Acl_auth
 			,'reset_code' => $reset_code
 		);
 
-		$message = $this->load->view( $this->_config['reset_template'], $data, TRUE );
-
+		//$message = $this->load->view( $this->_config['reset_template'], $data, TRUE );
+        $message = $this->_config['reset_template'].$reset_code;
+		
 		$this->email->from( $this->_config['admin_mail'], $this->_config['admin_name'] );
         $this->email->to( $user->email );
 

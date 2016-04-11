@@ -37,8 +37,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   </head>
    <body class="hold-transition skin-blue sidebar-mini">
-   <div class="wrapper">
    
+   <div class="wrapper">
+  
    <header class="main-header">
 	  
         <!-- Logo -->
@@ -246,7 +247,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+			
+                  <img src="<?php echo base_url();?>assets/userpics/<?php echo $_SESSION['userimage'];?>" class="user-image" alt="User Image">
                   <span class="hidden-xs">Alexander Pierce</span>
                 </a>
                 <ul class="dropdown-menu">

@@ -62,9 +62,9 @@
       <div id="register" class="form-action hide">
         <h1>Register</h1>
         <p>
-          You should totally sign up for our super awesome service. It's what all the cool kids are doing nowadays.
+          
         </p>
-		<?php echo form_open('admin/register');?>
+		<?php echo form_open_multipart('admin/do_upload');?>
         <!--<form  method="post" action="admin/register" >-->
           <ul>
             <li>
@@ -85,7 +85,7 @@
               </select>
             </li>
              <li>
-            <input type="file" placeholder="Browse" name="reg_pic"/>
+            <input type="file" placeholder="Browse" name="userfile"/>
             </li>
             <li class="captcha_bx">
             <div class="captcha"></div>
