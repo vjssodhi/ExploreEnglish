@@ -9,6 +9,9 @@ body {
 p{
   color:;
 }
+li{
+	 list-style:none;
+}
 input:focus{
   background-color:yellow;
 }
@@ -181,3 +184,4 @@ form select, form input[type=email]{font-weight:400;}
 .tabs li:last-child a {width: 150px;}
 .tabs a {padding: 12px 13px;}
 }
+

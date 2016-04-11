@@ -2,8 +2,22 @@
 
 <head>
   <link rel="stylesheet" href="<?php echo base_url();?>assets/backend/css/login.css">
+ 
     <!-- Font Awesome -->
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <style>
+  #register li .error {
+  background: #f2dede none repeat scroll 0 0;
+  border: 1px solid #f19ea0;
+  color: #a94442;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 10px 0;
+  padding: 10px;
+ 
+}
+  </style>
+ 
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
@@ -61,23 +75,27 @@
       <!--/#login.form-action-->
       <div id="register" class="form-action hide">
         <h1>Register</h1>
-        <p>
-          
-        </p>
-		<?php echo form_open_multipart('admin/do_upload');?>
+         <li>
+  <div class="error" id="error">
+   
+  </div>
+              
+            </li>
+		<!--<?php //echo form_open_multipart('admin/do_upload');?>-->
+		<form method="post" enctype="multipart/form-data" id="registerform">
         <!--<form  method="post" action="admin/register" >-->
           <ul>
             <li>
-              <input type="text" placeholder="Username" name="reg_username" />
+              <input type="text" placeholder="Username" name="reg_username"  id='reg_username'/>
             </li>
             <li>
-              <input type="password" placeholder="Password" name="reg_password"/>
+              <input type="password" placeholder="Password" name="reg_password" id="reg_password"/>
             </li>
              <li>
-              <input type="email" placeholder="Email" name="reg_email" />
+              <input type="email" placeholder="Email" name="reg_email" id="reg_email" />
             </li>
              <li>
-              <select name="reg_agent">
+              <select name="reg_agent" id="reg_agent">
               <option value="">User Type</option>
               <option value="teacher">Teacher</option>
               <option value="agent">Agent</option>
@@ -123,6 +141,46 @@
   </div>
   <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script src="<?php echo base_url();?>assets/backend/js/login.js"></script>
+  <script>
+  $("#registerform").submit(function(e) {
+	var username =  $('#reg_username').val();
+	var password =  $('#reg_password').val();
+	var email =  $('#reg_email').val();
+	var reg_agent =  $('#reg_agent').val();
+	if(username == '')
+	{
+	$('<p>Please enter a Username.</p>').appendTo('#error');
+		return false;
+		
+	}else if(password == ''){
+		
+	$('<p>Please enter a Password.</p>').appendTo('#error');
+		return false;			
+	}else if(email =='')
+	{
+	$('<p>Please enter an Email.</p>').appendTo('#error');
+		return false;				
+	}else if(reg_agent == '')
+	{
+	$('<p>Please select a Usertype.</p>').appendTo('#error');	
+		return false;
+	}else{
+		
+		$.ajax({
+           type: "POST",
+           url: url,
+           data: $("#registerform").serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+               alert(data); // show response from the php script.
+           }
+         });
+
+    e.preventDefault();
+	}
+	
+	  });
+  </script>
 </body>
 
 </html>

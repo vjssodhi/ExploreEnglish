@@ -56,6 +56,7 @@ class Admin extends CI_Controller {
 	{			 
 	if(!empty($_POST))
 	{
+	 
 	$filename =  $_FILES['userfile']['name'];
     $fileexplode = explode('.',$filename);
 
@@ -90,7 +91,8 @@ class Admin extends CI_Controller {
 	$success = $this->acl_auth->register( $data );
 	redirect('admin/dashboard');
 	         }	
-	 } 	
+	 
+	}	 
 	}
 	public function login()
 	{
