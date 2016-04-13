@@ -56,17 +56,19 @@ class Admin extends CI_Controller {
 	{			 
 	if(!empty($_POST))
 	{
-	 print_r($_POST); die;
+	
 	$filename =  $_FILES['userfile']['name'];
     $fileexplode = explode('.',$filename);
 
     $newfilename = $fileexplode[0].uniqid().'.jpg';
 	
 	//$uploadpath = APPPATH.'userpics\\';
-	$uploadpath = FCPATH.'assets/userpics/';
+	//$uploadpath = FCPATH.'assets/userpics/';
 	
+	$uploadpath = realpath(APPPATH . '../assets/userpics/');
+
 	$config['upload_path'] = $uploadpath;
-    $config['allowed_types'] = 'gif|jpg|png';
+    $config['allowed_types'] = 'gif|jpg|png|jpeg';
     $config['max_size'] = '1800';
     $config['max_width'] = '1800';
     $config['max_height'] = '1800';
@@ -75,8 +77,10 @@ class Admin extends CI_Controller {
     $this->load->library('upload', $config);
 	
 	if ( ! $this->upload->do_upload('userfile')) {
+
+
             $error = array('error' => $this->upload->display_errors()); 
-            redirect('admin/index'); 
+            echo 'failure';
          }			
          else { 
            $datapic = array('upload_data' => $this->upload->data()); 
@@ -89,7 +93,7 @@ class Admin extends CI_Controller {
 	
 	$data = array('vchUsername' => $user_name,'password' => $user_password,'email'=> $user_email,'vchUsertype' => $usertype,'dateCreated_at'=>$created_at,'vchImage'=> $newfilename);
 	$success = $this->acl_auth->register( $data );
-	redirect('admin/dashboard');
+	echo 'success';
 	         }	
 	 
 	}	 

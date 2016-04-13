@@ -187,19 +187,30 @@
 		
     var data;
 
-    formdata = new FormData();
-    data.append( 'file', $( '#userfile' )[0].files[0] );
+    data = new FormData();
+    data.append( 'userfile', $( '#userfile' )[0].files[0] );
+    data.append('reg_username',username);
+    data.append('reg_password',password);
+    data.append('reg_email',email);
+    data.append('reg_agent',reg_agent);
 		$.ajax({
            type: "POST",
            url: "<?php echo base_url(); ?>" + "admin/do_upload",
            //data: $("#registerform").serialize(), // serializes the form's elements.
-		   data:{formdata:formdata,username:username},
+		   data:data,
 		   processData: false,
            contentType: false,
-           success: function(data)
+           success: function(resp)
            {
-               alert(data); // show response from the php script.
-           }
+             if(resp=='success')
+             {
+ window.location.href = 'http://localhost/ExploreEnglish/admin/dashboard';
+             }else{
+
+window.location.href = 'http://localhost/ExploreEnglish/admin/index';
+             }
+              // alert(data); // show response from the php script.
+          }
          });
 
     e.preventDefault();

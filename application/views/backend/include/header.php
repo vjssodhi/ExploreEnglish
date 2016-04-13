@@ -247,8 +247,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-			
-                  <img src="<?php echo base_url();?>assets/userpics/<?php echo $_SESSION['userimage'];?>" class="user-image" alt="User Image">
+			        <?php if(!empty($_SESSION['userimage'] && file_exists( base_url().'assets/userpics/'.$_SESSION['userimage']))){?>
+                  <img src="<?php echo base_url();?>assets/userpics/<?php echo $_SESSION['userimage'];?>" class="user-image" alt="User Image" />
+                  <?php }else{ ?>
+                  <img src="<?php echo base_url();?>assets/userpics/default.jpg" class="user-image"  />
+                 <?php }?>
                   <span class="hidden-xs">Alexander Pierce</span>
                 </a>
                 <ul class="dropdown-menu">
@@ -291,3 +294,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </nav>
       </header>
+      
