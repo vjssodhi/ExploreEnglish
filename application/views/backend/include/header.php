@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/backend/css/bootstrap.min.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -26,6 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/morris/morris.css">
+
     <!-- jvectormap -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Date Picker -->
@@ -34,6 +36,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
 
   </head>
    <body class="hold-transition skin-blue sidebar-mini">
@@ -247,7 +261,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-			        <?php if(!empty($_SESSION['userimage'] && file_exists( base_url().'assets/userpics/'.$_SESSION['userimage']))){?>
+			        <?php 
+                 $_SESSION['userimage'] = '';
+              if(!empty($_SESSION['userimage'] && file_exists( base_url().'assets/userpics/'.$_SESSION['userimage']))){?>
                   <img src="<?php echo base_url();?>assets/userpics/<?php echo $_SESSION['userimage'];?>" class="user-image" alt="User Image" />
                   <?php }else{ ?>
                   <img src="<?php echo base_url();?>assets/userpics/default.jpg" class="user-image"  />

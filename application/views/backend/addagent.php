@@ -28,59 +28,74 @@
                   <!--<h3 class="box-title">Quick Example</h3>-->
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                
-				<?php echo form_open_multipart('admin/addstudent');?>
+             <div class="alert alert-danger" id="error" style="display:none;">
+  
+</div>   
+				<?php //echo form_open_multipart('admin/addagent');?>
+        <form method="post"  id="addagent">
                   <div class="box-body">
                   <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half space">
-                      <label for="exampleInputfirstname">First name</label>
-                      <input type="text" placeholder="First Name" id="exampleInputfirstname" class="form-control">
+                      <label for="agentfirstname">First name</label>
+                      <input type="text" placeholder="First Name" id="agentfirstname" class="form-control" name="agentfirstname">
                     </div>
+              
                     <div class="form-group col-md-6 col-sm-6 col-xs-12 no_padding half">
-                      <label for="exampleInputlastname">Last name</label>
-                      <input type="text" placeholder="Last Name" id="exampleInputlastname" class="form-control">
+                      <label for="agentlastname">Last name</label>
+                      <input type="text" placeholder="Last Name" id="agentlastname" class="form-control" name="agentlastname">
                     </div>
-                     
+
                     <div class="form-group">
-                      <label for="exampleInputdob">Email id</label>
-                      <input type="email" placeholder="Email id" id="exampleInputdob" class="form-control">
+                      <label for="commissionI">Commission Percentage%</label>
+                      <input type="number" value="" placeholder="Commission % (0-100)" id="commissionI" class="form-control" required="required" name="commissionPercentage"></div>
+
+                    <div class="form-group">
+                      <label for="agentemail">Email id</label>
+                      <input type="email" placeholder="Email id" id="agentemail" class="form-control" name="agentemail">
                     </div>
                     
                        <div class="form-group">
-                      <label for="exampleInputdob">Phone number</label>
-                      <input type="email" placeholder="Phone number" id="exampleInputdob" class="form-control">
+                      <label for="agentphone">Phone number</label>
+                      <input type="email" placeholder="Phone number" id="agentphone" class="form-control" name="agentphone">
                     </div>
+
+                    <div class="form-group"><label for="exampleInputEmail1">Address</label><textarea id="agentaddress" class="form-control" placeholder="Agent's Address" required="required" name="agentaddress"></textarea></div>
                     
-                    <div class="form-group">
+                   <!-- <div class="form-group">
                       <label for="exampleInputdob">Person image</label>
                       <input type="file" name="userfile" placeholder="Browse">
-                    </div>
+                    </div>-->
+
+                    <div class="form-group"><label for="exampleInputEmail1">Status</label><select id="instStatusS" class="form-control" required="required" name="agentstatus"><option value="">&lt;Enable/Disable&gt;</option>
+<option value="0">Disabled</option>
+<option value="1">Enabled</option></select></div>
                     
           
                     
 
-                   <div class="form-group">
+                  <!--<div class="form-group">
                     <label>Date range:</label>
                     <div class="input-group">
                       <div class="input-group-addon">
                         <i class="fa fa-calendar"></i>
                       </div>
                       <input type="text" class="form-control pull-right" id="reservation">
-                    </div><!-- /.input group -->
-                  </div>
+                    </div>
+                  </div>-->
 
                     
                       
-                    <div class="form-group">
+                    <!--<div class="form-group">
                       <label for="exampleInputtest">Person in charge</label>
                       <input type="text" placeholder="Person incharge test" id="exampleInputtest" class="form-control">
-                    </div>
+                    </div>-->
             
                     
               
                   </div><!-- /.box-body -->
 
                   <div class="box-footer text-center">
-                    <button class="btn btn-primary" type="submit">Add</button>
+                    <!--<button class="btn btn-primary" type="submit">Add</button>-->
+                    <a onclick="addagentfnction();" class="btn btn-primary" type="button">Add</a>
                   </div>
                 </form>
               </div><!-- /.box -->
