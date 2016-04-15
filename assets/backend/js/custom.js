@@ -77,7 +77,7 @@ if(agentfirstname == '')
 		  
            success: function(respn)
            {
-           	alert(respn);
+           
              if(respn==1)
              {
         window.location.href = 'http://localhost/ExploreEnglish/agent/index';
@@ -107,5 +107,45 @@ if(agentfirstname == '')
 
 
 
-	     }
+	    }
+   }
+
+function checkstudents()
+{
+
+ var teacherid = $('#teacherid').val();
+ var courseid  = $('#courseid').val();
+ var usertype = $('#usertype').val();
+ 
+ //var attendencedate = $('#attendencedate').val();
+ if(usertype == 'teacher')
+ {
+ window.location.href = 'http://localhost/ExploreEnglish/Attendence/getstudents/'+usertype+'/'+teacherid+'/'+courseid;
+ }else
+   {
+   $('#error').show();
+    $('#error').text('Please make sure you are logged in as teacher.');
+        $('#error').delay(1000).fadeOut();
+  
+    return false;
+
+   }
+
+
+   
+ /*$.ajax({
+           type: "POST",
+           url: "getstudents",
+           data:{teacherid:teacherid,courseid:courseid}, // serializes the form's elements.
+		  
+           success: function(respn)
+           {
+           	
+       
+            
+              
+          }
+         });*/
+
+
 }

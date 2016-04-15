@@ -66,7 +66,7 @@ var dataSet = [
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1 class="text-center">
-            Add Agent
+            Agent List
            
           </h1>
           <ol class="breadcrumb">

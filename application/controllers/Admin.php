@@ -33,19 +33,42 @@ class Admin extends CI_Controller {
 		$this->load->view('backend/index');
 	}
 	public function dashboard()
-	{	
+	{
+
+
+
+
     if($this->session->userdata('logged_in'))
     {
     $identity = $_SESSION['user_email'];
 	$this->load->model('user_model');
    $userdata = $this->user_model->get_user($identity);
    
+
+    
+
+  
    if(!empty($userdata->vchImage)){
-	   $_SESSION['userimage'] =  $userdata->vchImage;
+	   //$_SESSION['userimage'] =  $userdata->vchImage;
+       
+       $this->session->set_userdata('userimage', $userdata->vchImage);
    }else{
-	   $_SESSION['userimage'] = 'default.jpg';   
+	  // $_SESSION['userimage'] = 'default.jpg';  
+	    $this->session->set_userdata('userimage', 'default.jpg'); 
    }
-   
+
+   if(!empty($userdata->vchUsertype))
+   {
+   	//$_SESSION['usertype'] =  $userdata->vchUsertype;
+   	 $this->session->set_userdata('usertype', $userdata->vchUsertype);
+   }else
+   {
+   	//$_SESSION['usertype'] = '';
+   	$this->session->set_userdata('usertype', ''); 
+   }
+
+  	 
+
 	$this->load->view('backend/dashboard');
     }else{
 	  redirect('admin/index');

@@ -1,8 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+ 
 
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -45,7 +46,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>assets/backend/js/custom.js"></script>
 
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
 
 
 
@@ -262,7 +269,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			        <?php 
-                 $_SESSION['userimage'] = '';
+                 //$_SESSION['userimage'] = '';
               if(!empty($_SESSION['userimage'] && file_exists( base_url().'assets/userpics/'.$_SESSION['userimage']))){?>
                   <img src="<?php echo base_url();?>assets/userpics/<?php echo $_SESSION['userimage'];?>" class="user-image" alt="User Image" />
                   <?php }else{ ?>

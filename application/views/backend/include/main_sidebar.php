@@ -66,6 +66,19 @@
                  <li><a href="<?php echo site_url('agent/addagent');?>"><i class="fa fa-plus-square"></i> <span>Add agent</span></a></li>
               </ul>
             </li>
+
+             <li class="treeview">
+              <a href="<?php echo site_url('Attendence/index');?>">
+                <i class="fa fa-user"></i>
+                <span>Attendence</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <!--<ul class="treeview-menu">
+                 <li><a href="<?php //echo site_url('agent/index');?>"><i class="fa fa-list-alt"></i> <span>view agent</span></a></li>
+                 <li><a href="<?php //echo site_url('agent/addagent');?>"><i class="fa fa-plus-square"></i> <span>Add agent</span></a></li>
+              </ul>-->
+            </li>
+
            <!-- <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
